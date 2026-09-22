@@ -28,7 +28,7 @@ export function ChapterFinale() {
         {/* Understated Minimal CTA */}
         <div className="mt-14 flex items-center justify-center">
           <a
-            href="#hero"
+            href="/dashboard"
             className="group inline-flex items-center gap-3 px-8 py-4 rounded-full border border-white/15 bg-white/[0.03] text-sm font-mono tracking-[0.2em] uppercase text-[#F5F5F7] hover:border-white/40 hover:bg-white/[0.08] transition-all duration-300"
           >
             <span>Explore LifeGraph</span>

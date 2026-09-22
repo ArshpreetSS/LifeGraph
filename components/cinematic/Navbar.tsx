@@ -43,7 +43,7 @@ export function CinematicNavbar() {
 
       {/* Understated Quiet Action */}
       <a
-        href="#finale"
+        href="/dashboard"
         className="group text-[#A1A1AA] hover:text-[#F5F5F7] transition-colors flex items-center gap-1.5 uppercase text-[11px] tracking-[0.18em]"
       >
         <span>Launch Graph</span>
