@@ -53,7 +53,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
         className="fixed inset-0 bg-black/80 backdrop-blur-md"
         onClick={onClose}
       />
-      <div className="fixed inset-y-0 left-0 w-72 bg-[#0A0D10] border-r border-white/10 p-6 flex flex-col justify-between overflow-y-auto animate-in slide-in-from-left duration-200">
+      <div className="fixed inset-y-0 left-0 w-72 max-w-[85vw] bg-[#0A0D10] border-r border-white/10 p-6 pb-[calc(env(safe-area-inset-bottom,0px)+1.5rem)] flex flex-col justify-between overflow-y-auto animate-in slide-in-from-left duration-200">
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <span className="text-xs font-mono tracking-[0.25em] text-white uppercase font-bold">

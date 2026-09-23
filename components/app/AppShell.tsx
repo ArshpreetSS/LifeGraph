@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, createContext, useContext } from "react";
+import Link from "next/link";
 import { Sidebar } from "@/components/app/Sidebar";
 import { Topbar } from "@/components/app/Topbar";
 import { MobileNav } from "@/components/app/MobileNav";
@@ -92,35 +93,35 @@ export function AppShell({ children }: AppShellProps) {
             </main>
 
             {/* Mobile Bottom Navigation Bar */}
-            <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-30 h-14 bg-[#0A0D11]/95 backdrop-blur-md border-t border-white/[0.08] px-4 flex items-center justify-around text-[10px] font-mono uppercase tracking-wider">
-              <a
+            <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-30 h-16 bg-[#0A0D11]/95 backdrop-blur-md border-t border-white/[0.08] px-4 pb-[env(safe-area-inset-bottom,0px)] flex items-center justify-around text-[10px] font-mono uppercase tracking-wider">
+              <Link
                 href="/dashboard"
-                className="flex flex-col items-center gap-1 text-[#A1A1AA] hover:text-white"
+                className="flex flex-col items-center gap-1 py-1 text-[#A1A1AA] hover:text-white"
               >
                 <span className="w-1 h-1 rounded-full bg-[#D4FF00]" />
                 <span>Dash</span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/explore"
-                className="flex flex-col items-center gap-1 text-[#A1A1AA] hover:text-[#D4FF00]"
+                className="flex flex-col items-center gap-1 py-1 text-[#A1A1AA] hover:text-[#D4FF00]"
               >
                 <span>Explore</span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/knowledge"
-                className="flex flex-col items-center gap-1 text-[#A1A1AA] hover:text-white"
+                className="flex flex-col items-center gap-1 py-1 text-[#A1A1AA] hover:text-white"
               >
                 <span>Nodes</span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/ask"
-                className="flex flex-col items-center gap-1 text-[#A1A1AA] hover:text-[#D4FF00]"
+                className="flex flex-col items-center gap-1 py-1 text-[#A1A1AA] hover:text-[#D4FF00]"
               >
                 <span>Ask AI</span>
-              </a>
+              </Link>
               <button
                 onClick={() => setIsMobileNavOpen(true)}
-                className="flex flex-col items-center gap-1 text-[#A1A1AA] hover:text-white"
+                className="flex flex-col items-center gap-1 py-1 text-[#A1A1AA] hover:text-white"
               >
                 <span>Menu</span>
               </button>
