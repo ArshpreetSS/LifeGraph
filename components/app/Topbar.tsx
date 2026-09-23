@@ -5,12 +5,16 @@ import Link from "next/link";
 import { Search, Sparkles, Command, Menu } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
+import { GRAPH_NODES } from "@/lib/mockData";
+
 interface TopbarProps {
   onOpenSearch: () => void;
   onOpenMobileMenu?: () => void;
 }
 
 export function Topbar({ onOpenSearch, onOpenMobileMenu }: TopbarProps) {
+  const nodeCount = GRAPH_NODES.length;
+
   return (
     <header className="h-14 border-b border-white/[0.08] bg-[#070809]/80 backdrop-blur-md sticky top-0 z-20 px-4 sm:px-8 flex items-center justify-between gap-4">
       {/* Mobile Menu & Logo */}
@@ -57,7 +61,7 @@ export function Topbar({ onOpenSearch, onOpenMobileMenu }: TopbarProps) {
       <div className="flex items-center gap-4">
         <div className="hidden md:flex items-center gap-2 text-[11px] font-mono text-[#71717A] uppercase tracking-wider">
           <span className="w-2 h-2 rounded-full bg-[#D4FF00] animate-pulse shadow-[0_0_8px_#D4FF00]" />
-          <span>Graph Live // 42 Nodes</span>
+          <span>Graph Live // {nodeCount > 0 ? `${nodeCount} Nodes` : "Awaiting Nodes"}</span>
         </div>
 
         <Link href="/ask">
